@@ -53,8 +53,7 @@ def main():
                 x = completed_x
                 completed_x += 1
                 futures.remove(future)
-                if (completed_x >= 127):
-                    continue
+                #TODO: Handles X reaches max
                 futures.append(executor.submit(download_tiles_for_x, x))
 
 if __name__ == "__main__":
